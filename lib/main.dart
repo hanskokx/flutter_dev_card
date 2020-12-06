@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dev_card/components/dev_card.dart';
+import 'package:flutter_dev_card/components/avatar.dart';
 
 void main() {
   runApp(MyApp());

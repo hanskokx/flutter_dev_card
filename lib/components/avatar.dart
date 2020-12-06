@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dev_card/settings.dart';
 
-final kGradientColors = [
-  const Color(0xFFBB9ADA),
-  const Color(0xFFA5DCEC),
-];
 const kBorderWidth = 5.0;
 const kAvatarSize = 200.0;
 
 final kInnerDecoration = BoxDecoration(
   image: new DecorationImage(
-    image: new NetworkImage('https://avatars3.githubusercontent.com/u/1911919'),
+    image: new NetworkImage(kAvatarUrl),
     fit: BoxFit.cover,
   ),
   borderRadius: BorderRadius.circular(kAvatarSize / 2),
@@ -22,20 +19,7 @@ final kGradientBoxDecoration = BoxDecoration(
     end: Alignment.bottomRight,
   ),
   borderRadius: BorderRadius.circular(kAvatarSize / 2),
-  boxShadow: [
-    BoxShadow(
-      color: kGradientColors[0].withOpacity(0.5),
-      spreadRadius: 2,
-      blurRadius: 7,
-      offset: Offset(-2, -2),
-    ),
-    BoxShadow(
-      color: kGradientColors[1].withOpacity(0.5),
-      spreadRadius: 2,
-      blurRadius: 7,
-      offset: Offset(2, 2),
-    ),
-  ],
+  boxShadow: boxShadowStyle,
 );
 
 class AvatarImage extends StatelessWidget {
