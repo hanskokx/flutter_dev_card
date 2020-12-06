@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dev_card/settings/colors.dart';
 
-final boxShadowStyle = [
+final List<BoxShadow> kBoxShadowStyle = [
   BoxShadow(
     color: kGradientColors[0].withOpacity(0.5),
     spreadRadius: 2,

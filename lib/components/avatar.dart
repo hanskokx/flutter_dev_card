@@ -19,7 +19,7 @@ final kGradientBoxDecoration = BoxDecoration(
     end: Alignment.bottomRight,
   ),
   borderRadius: BorderRadius.circular(kAvatarSize / 2),
-  boxShadow: boxShadowStyle,
+  boxShadow: kBoxShadowStyle,
 );
 
 class AvatarImage extends StatelessWidget {
