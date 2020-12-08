@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dev_card/settings.dart';
+import 'package:flutter_dev_card/settings/gradient.dart';
 
 const kBorderWidth = 5.0;
 const kAvatarSize = 200.0;
 
-final kInnerDecoration = BoxDecoration(
+final kAvatarInnerDecoration = BoxDecoration(
   image: new DecorationImage(
     image: new NetworkImage(kAvatarUrl),
     fit: BoxFit.cover,
@@ -12,17 +13,13 @@ final kInnerDecoration = BoxDecoration(
   borderRadius: BorderRadius.circular(kAvatarSize / 2),
 );
 
-final kGradientBoxDecoration = BoxDecoration(
-  gradient: LinearGradient(
-    colors: kGradientColors,
-    begin: Alignment.topLeft,
-    end: Alignment.bottomRight,
-  ),
+final kAvatarGradientCircleDecoration = BoxDecoration(
+  gradient: kNeoPunkGradient,
   borderRadius: BorderRadius.circular(kAvatarSize / 2),
   boxShadow: kBoxShadowStyle,
 );
 
-class AvatarImage extends StatelessWidget {
+class NeoPunkAvatar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Container(
@@ -31,10 +28,10 @@ class AvatarImage extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(kBorderWidth),
         child: new Container(
-          decoration: kInnerDecoration,
+          decoration: kAvatarInnerDecoration,
         ),
       ),
-      decoration: kGradientBoxDecoration,
+      decoration: kAvatarGradientCircleDecoration,
     );
   }
 }
