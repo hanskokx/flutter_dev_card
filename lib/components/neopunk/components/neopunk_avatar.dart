@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dev_card/settings.dart';
 import 'package:flutter_dev_card/settings/gradient.dart';
 
+final kAvatarUrl = 'https://avatars3.githubusercontent.com/u/1911919';
+
 const kBorderWidth = 5.0;
-const kAvatarSize = 200.0;
+const kAvatarSize = 150.0;
 
 final kAvatarInnerDecoration = BoxDecoration(
   image: new DecorationImage(

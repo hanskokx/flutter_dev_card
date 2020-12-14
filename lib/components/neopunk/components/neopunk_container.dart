@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_dev_card/settings.dart';
 
@@ -18,15 +20,15 @@ class NeopunkContainer extends StatelessWidget {
       child: Container(
         child: Container(
           decoration: BoxDecoration(
-            gradient: kNeoPunkGradient,
+            // gradient: kNeoPunkGradient,
+            color: Colors.white,
             borderRadius: borderRadius,
           ),
           child: Padding(
             padding: const EdgeInsets.all(6.0),
             child: Container(
               decoration: BoxDecoration(
-                borderRadius: borderRadius/2,
-                color: Colors.white,
+                borderRadius: borderRadius / 2,
               ),
               child: child,
             ),
