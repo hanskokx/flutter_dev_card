@@ -12,29 +12,32 @@ class NeopunkContainer extends StatelessWidget {
 
     return Container(
       decoration: BoxDecoration(
+        // gradient: kNeoPunkGradient,
+        color: Colors.transparent,
         borderRadius: borderRadius,
-        boxShadow: kBoxShadowStyle,
+        // boxShadow: kBoxShadowStyle,
       ),
-      child: Container(
+      child: Padding(
+        padding: const EdgeInsets.all(6.0),
         child: Container(
           decoration: BoxDecoration(
-            // gradient: kNeoPunkGradient,
-            color: Colors.white,
-            borderRadius: borderRadius,
+            borderRadius: borderRadius / 2,
           ),
-          child: Padding(
-            padding: const EdgeInsets.all(6.0),
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: borderRadius / 2,
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              ClipRRect(
+                borderRadius: borderRadius,
+                child: BackdropFilter(
+                  filter: ImageFilter.blur(sigmaX: 12, sigmaY: 12),
+                  child: Container(
+                    height: 550, width: 400,
+                    ),
+                ),
               ),
-              child: child,
-            ),
+              child,
+            ],
           ),
-        ),
-        decoration: BoxDecoration(
-          gradient: kNeoPunkGradient,
-          borderRadius: borderRadius,
         ),
       ),
     );
